@@ -30,8 +30,9 @@ module "lambda" {
 module "apigateway" {
   source                               = "./modules/apigateway"
   app_name                             = var.app_name
-  lambda_authorizer_invoke_arn         = module.lambda.lambda_authorizer_invoke_arn
   lambda_protected_endpoint_invoke_arn = module.lambda.lambda_protected_endpoint_invoke_arn
+  cognito_user_pool_client_id          = module.cognito.cognito_user_pool_client_id
+  cognito_user_pool_main_endpoint      = module.cognito.cognito_user_pool_main_endpoint
 }
 
 # Cognito
