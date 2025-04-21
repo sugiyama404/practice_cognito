@@ -1,1 +1,2 @@
-
+variable "username" {}
+variable "password" {}

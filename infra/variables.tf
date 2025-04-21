@@ -9,3 +9,13 @@ variable "region" {
   type        = string
   default     = "ap-northeast-1"
 }
+
+variable "username" {
+  description = "Cognito username"
+  type        = string
+}
+
+variable "password" {
+  description = "Cognito password"
+  type        = string
+}

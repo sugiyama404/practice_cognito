@@ -37,5 +37,7 @@ module "apigateway" {
 
 # Cognito
 module "cognito" {
-  source = "./modules/cognito"
+  source   = "./modules/cognito"
+  username = var.username
+  password = var.password
 }
